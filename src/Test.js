@@ -18,7 +18,7 @@ export default class Test extends Component {
                         visible={this.state.visible}
                         component={BodyContent}
                         showFull={true}
-                        mini={true}
+                        hideCancel={false}
                         area={[500,300]}
                     />
             </div>
