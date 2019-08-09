@@ -1,4 +1,5 @@
 # react-movable-modal
+本来想叫react-dialog,可是来晚了，修改名字为：react-movable-modal
 使用ReactJS构架封装了一个可以自由移动的React弹框，可以放大缩小，添加自己的Component
 
 ## 示例Demo
@@ -21,7 +22,7 @@ npm install
 npm start
 
 ```
-React-Dialog
+## react-movable-modal
 =====
 
 ## Api
