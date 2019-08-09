@@ -1,0 +1,126 @@
+.box-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:0;
+  display: flex;//flex布局
+  justify-content: center;//使子项目水平居中
+  align-items: center;//使子项目垂直居中
+  background-color: rgba(0,0,0,0.3);
+  z-index: 9997;
+  #react-dialog{
+    height: 100%;
+    z-index: 9998;
+    position: absolute;
+    overflow-x: hidden;
+    background-color: #F8F8F8;
+    .box-header{
+      padding: 0 10px 0 20px;
+      height: 42px;
+      line-height: 42px;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      color: #333;
+      overflow: hidden;
+      border-radius: 2px 2px 0 0;
+      .box-title{
+        float: left;
+      }
+    }
+    
+    .box-title-icons{    
+      z-index: 9999;
+      position: absolute;
+      right: 10px;
+      top: 0px;
+      width: 100px;
+      div{
+        width: 20px;
+        height: 20px;
+        background-size: 20px;/*按比例缩放*/
+        float: right;
+        cursor: pointer;
+        margin-top:10px;
+        margin-right: 5px;
+      }
+      .icon-fullscreen{
+          background-image: url(../images/fullscreen.svg)
+      }
+      .icon-fullscreen-exit{
+          background-image: url(../images/fullscreen-exit.svg)
+      }
+      .icon-close{
+          background-image: url(../images/close.svg)
+      }
+      .icon-minisize{
+          background-image: url(../images/minus.svg)
+      }
+    }
+    .box-content{
+      position: relative;
+      padding: 20px;
+      word-break: break-all;
+      overflow: hidden;
+      font-size: 14px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .box-footer{
+      background-color: #F8F8F8;
+      height: 45px;
+      line-height: 45px;
+      bottom: 0px;
+      position: absolute;
+      width: 100%;
+      .btn{
+        float:right;
+        border-color: #1E9FFF;
+        background-color: #1E9FFF;
+        color: #fff;
+        height: 28px;
+        line-height: 28px;
+        margin: 5px 5px 0;
+        padding: 0 15px;
+        border: 1px solid #dedede;
+        border-radius: 2px;
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.box-minisize{
+  z-index: 9999;
+  width: 150px;
+  height: 42px;
+  line-height: 42px;
+  position: absolute;
+  bottom: 0px;
+  border: 1px solid #eee;
+  .box-title{
+    float: left;
+    padding-left: 10px;
+  }
+  .box-title-icons{
+    div{    
+      width: 20px;
+      height: 20px;
+      background-size: 20px;/*按比例缩放*/
+      float: right;
+      cursor: pointer;
+      margin-top:10px;
+      margin-right: 5px;
+    }
+    .icon-fullscreen{
+        background-image: url(../images/fullscreen.svg)
+    }
+    .icon-close{
+        background-image: url(../images/close.svg)
+    }
+    .icon-fullscreen-exit{
+        background-image: url(../images/fullscreen-exit.svg)
+    }
+  }
+}
