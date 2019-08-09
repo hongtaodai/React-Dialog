@@ -14,6 +14,7 @@
     z-index: 9998;
     position: absolute;
     overflow-x: hidden;
+    overflow-y: auto;
     background-color: #F8F8F8;
     .box-header{
       padding: 0 10px 0 20px;
@@ -45,16 +46,16 @@
         margin-right: 5px;
       }
       .icon-fullscreen{
-          background-image: url(../images/fullscreen.svg)
+          background-image: url('../images/full.svg')
       }
       .icon-fullscreen-exit{
-          background-image: url(../images/fullscreen-exit.svg)
+          background-image: url('../images/full screen-exit.svg')
       }
       .icon-close{
-          background-image: url(../images/close.svg)
+          background-image: url('../images/close.svg')
       }
       .icon-minisize{
-          background-image: url(../images/minus.svg)
+          background-image: url('../images/minus.svg')
       }
     }
     .box-content{
@@ -74,9 +75,10 @@
       position: absolute;
       width: 100%;
       .btn{
+        color: #fff;
+        background-color: #5bc0de;
+        border-color: #46b8da;
         float:right;
-        border-color: #1E9FFF;
-        background-color: #1E9FFF;
         color: #fff;
         height: 28px;
         line-height: 28px;
@@ -86,7 +88,12 @@
         border-radius: 2px;
         font-weight: 400;
         cursor: pointer;
+        border-radius: 4px;
         text-decoration: none;
+        &:hover{
+          background-color: #31b0d5;
+          border-color: #269abc;
+        }
       }
     }
   }
@@ -114,13 +121,13 @@
       margin-right: 5px;
     }
     .icon-fullscreen{
-        background-image: url(../images/fullscreen.svg)
+        background-image: url('../images/full.svg')
     }
     .icon-close{
-        background-image: url(../images/close.svg)
+        background-image: url('../images/close.svg')
     }
     .icon-fullscreen-exit{
-        background-image: url(../images/fullscreen-exit.svg)
+        background-image: url('../images/full screen-exit.svg')
     }
   }
 }

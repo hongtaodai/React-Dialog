@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-// import ReactDialog from './ReactDialog'
-import ReactDialog from '../dist/ReactDialog'
+import ReactDialog from './ReactDialog'
+// import ReactDialog from '../dist/ReactDialog'
 import BodyContent from './BodyContent'
 
 export default class Test extends Component {
@@ -12,11 +12,13 @@ export default class Test extends Component {
     }
     render() {
         return (
-            <div>
-                <button onClick={()=>{this.show()}}>弹出对话框</button>                                    
+            <div style={{textAlign:"center"}}>
+                <button style={{width:200,height:50}} onClick={()=>{this.show()}}>弹出对话框</button>                                    
                     <ReactDialog 
                         visible={this.state.visible}
                         component={BodyContent}
+                        showFull={true}
+                        mini={true}
                         area={[500,300]}
                     />
             </div>

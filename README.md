@@ -14,5 +14,16 @@ npm start
 React-Dialog
 =====
 
-## Api--极简
-    // to do
+## Api
+```
+visible：是否可见 true|false
+showFull: 是否显示最大化最小化 true|false
+hideCancel：是否隐藏“取消”按钮 true|false
+area：对话框大小 [500,300]
+title：标题文字 默认为“信息”
+okText：确定文字 默认为“确定”
+cancelText：取消文字 默认为“取消”
+
+OK: funtion() 点击ok执行的方法
+Close: funtion() 点击取消或者关闭按钮执行的方法
+```

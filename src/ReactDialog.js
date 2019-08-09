@@ -29,9 +29,11 @@ class ReactDialog extends Component {
     }
     handleCancel = () => {
         this.setState({ visible: false })
-        typeof this.props.hideModal === 'function' && this.props.hideModal()
+        typeof this.props.Close === 'function' && this.props.Close()
     }
-    componentDidMount(){
+    handleOk = () => {
+        // this.setState({ visible: false })
+        typeof this.props.OK === 'function' && this.props.OK()
     }
     shouldComponentUpdate(nextProps,nextState){
         if(nextProps.visible!==this.props.visible || 
@@ -142,6 +144,16 @@ class ReactDialog extends Component {
             visible:false
         })
     }
+    showBtns = () => {
+        let eles = []
+        if(this.props.showFull){
+            let btn = this.state.full ? <div className="icon-fullscreen-exit" title="还原" onClick={(e)=>{this.quitfull(e)}}></div> : 
+            <div className="icon-fullscreen" title="最大化" onClick={(e)=>{this.full(e)}}></div>
+            eles.push(btn)            
+            eles.push(<div className="icon-minisize" title="最小化" onClick={(e)=>{this.mini(e)}}></div>)
+        }
+        return eles
+    }
     render() {
         const { styleType, draggable, title, loading, className, component, componentProps } = this.props
         const { visible, area } = this.state
@@ -162,19 +174,20 @@ class ReactDialog extends Component {
                             <div className="box-title">{this.props.title || '信息'}</div>
                         </div>
                         <div className="box-title-icons">
-                            <div className="icon-close" title="关闭" onClick={()=>{this.handleCancel()}}></div>                            
+                            <div className="icon-close" title="关闭" onClick={()=>{this.handleCancel()}}></div>  
                             {
-                                this.state.full ? <div className="icon-fullscreen-exit" title="还原" onClick={(e)=>{this.quitfull(e)}}></div> : 
-                                <div className="icon-fullscreen" title="最大化" onClick={(e)=>{this.full(e)}}></div>
+                                this.showBtns()
                             }
-                            <div className="icon-minisize" title="最小化" onClick={(e)=>{this.mini(e)}}></div>
                         </div>
                         <div className="box-content">
                             {this.renderBodyContent({ component, componentProps })}
                         </div>
                         <div className="box-footer">
-                            <div className="btn" onClick={()=>{this.handleOk()}}>确定</div>
-                            <div className="btn" onClick={()=>{this.handleCancel()}}>取消</div>
+                            <div className="btn" onClick={()=>{this.handleOk()}}>{this.props.okText || '确定'}</div>
+                            {
+                                !this.props.hideCancel ? <div className="btn" onClick={()=>{this.handleCancel()}}>{this.props.cancelText || '取消'}</div> : null
+                            }
+                            
                         </div>
                     </div>
                 </div>
