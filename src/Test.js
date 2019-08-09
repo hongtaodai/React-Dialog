@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ReactDialog from './ReactDialog'
-// import ReactDialog from '../dist/ReactDialog'
+import ReactMovableModal from './ReactMovableModal'
+// import ReactMovableModal from '../dist/ReactMovableModal'
 import BodyContent from './BodyContent'
 
 export default class Test extends Component {
@@ -14,7 +14,7 @@ export default class Test extends Component {
         return (
             <div style={{textAlign:"center"}}>
                 <button style={{width:200,height:50}} onClick={()=>{this.show()}}>弹出对话框</button>                                    
-                    <ReactDialog 
+                    <ReactMovableModal 
                         visible={this.state.visible}
                         component={BodyContent}
                         showFull={true}

@@ -1,4 +1,4 @@
-# React-Dialog
+# react-movable-modal
 使用ReactJS构架封装了一个可以自由移动的React弹框，可以放大缩小，添加自己的Component
 
 ## 示例Demo
@@ -7,7 +7,14 @@
 
 在本地运行本程序:
 
+## 安装
 ```
+npm install react-movable-modal --save
+```
+
+## 下载运行
+```
+
 安装：
 npm install
 运行Demo：

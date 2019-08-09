@@ -5,9 +5,9 @@ import React, { Component } from 'react'
 import './css/dialog.less'
 
 /**
- * @class ReactDialog
+ * @class ReactMovableModal
  */
-class ReactDialog extends Component {
+class ReactMovableModal extends Component {
     constructor(props) {
         super(props)
         const { x, y } = props.position || {}
@@ -207,4 +207,4 @@ class ReactDialog extends Component {
     }
 }
 
-export default ReactDialog
+export default ReactMovableModal

@@ -4,11 +4,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   mode: "production",
   entry: [
-    path.join(__dirname, 'src/ReactDialog.js'),
+    path.join(__dirname, 'src/ReactMovableModal.js'),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'ReactDialog.js',
+    filename: 'ReactMovableModal.js',
     libraryTarget: 'commonjs2',
   },
   externals: {

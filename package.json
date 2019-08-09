@@ -1,8 +1,8 @@
 {
-    "name": "React-Dialog",
+    "name": "react-movable-modal",
     "version": "1.0.0",
     "description": "一个可以自由移动的React弹框，可以放大缩小，添加自己的Component",
-    "main": "dist/YourComponent.js",
+    "main": "dist/ReactMovableModal.js",
     "scripts": {
         "build": "webpack --config webpack.prod.js",
         "start": "webpack-dev-server --config webpack.dev.js"
