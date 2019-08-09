@@ -1,5 +1,5 @@
 /**
- * Created by fancl on 2018/12/4.
+ * Created by shark
  */
 import React, { Component } from 'react'
 import './css/dialog.less'

@@ -3,10 +3,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: "production",
-  entry: './src/index.js',
+  entry: [
+    path.join(__dirname, 'src/ReactDialog.js'),
+  ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'YourComponent.js',
+    filename: 'ReactDialog.js',
     libraryTarget: 'commonjs2',
   },
   externals: {
@@ -24,7 +26,29 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
-      }
+      },
+      {
+        test: /\.less$/,
+        use: [{
+              loader: "style-loader" // creates style nodes from JS strings
+              }, {
+                  loader: "css-loader" // translates CSS into CommonJS
+              }, 
+              {
+                  loader: "less-loader" // compiles Less to CSS
+            }]
+      },
+      {
+          test: /\.(png|jpg|gif|eot|svg|ttf|woff|otf)$/,
+          use: [
+              {
+                  loader: 'url-loader',
+                  options: {
+                      limit: 12288
+                  }
+              }
+          ]
+      },
     ]
   },
   plugins: [
